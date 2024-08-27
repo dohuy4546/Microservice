@@ -23,7 +23,7 @@ import java.util.*;
 @Slf4j
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/api/locationservice")
 public class ApiLocationHistoryController {
     @Autowired
     private LocationHistoryService locationHistoryService;

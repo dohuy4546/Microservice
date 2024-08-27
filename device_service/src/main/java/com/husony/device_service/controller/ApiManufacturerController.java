@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Controller
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/api/deviceservice")
 public class ApiManufacturerController {
     @Autowired
     private ManufacturerService manufacturerService;

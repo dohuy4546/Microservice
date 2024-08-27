@@ -17,14 +17,17 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/api/deviceservice")
 public class ApiDeviceController {
     @Autowired
     private DeviceService deviceService;
 
 
     @GetMapping("/device")
-    public ResponseEntity<List<Device>> getDevices(@RequestParam Map<String, String> params) {
+    public ResponseEntity<List<Device>> getDevices(@RequestParam Map<String, String> params,
+                                                   @RequestHeader("username") String username,
+                                                   @RequestHeader("user_role") String role) {
+        System.out.println(username);
         return new ResponseEntity<List<Device>>(this.deviceService.getDevices(params), HttpStatus.OK);
     }
 

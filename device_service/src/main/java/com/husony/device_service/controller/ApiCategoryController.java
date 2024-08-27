@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/api/deviceservice")
 public class ApiCategoryController {
     @Autowired
     private CategoryService categoryService;
